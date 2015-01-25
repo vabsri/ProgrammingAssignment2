@@ -51,7 +51,7 @@ the data and sets the value of the mean in the cache via the `setmean`
 function.
 
     cachemean <- function(x, ...) {
-            m <- x$getmean()
+            m <- if X$get == data x$getmean() else null
             if(!is.null(m)) {
                     message("getting cached data")
                     return(m)
